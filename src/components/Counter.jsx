@@ -7,7 +7,9 @@ function Counter() {
   const [count, setCount] = useState(0);
 
   function increaseHandle() {
-    setCount(count + 1);
+    setCount(function () {
+      count + 1;
+    });
   }
 
   function resetHandle() {
