@@ -5,7 +5,7 @@ function Header() {
     <header className="container blur">
       <nav className="navbar">
         <div className="container d-flex justify-content-center">
-          <a className="navbar-brand fs-3 text-white" href="/">
+          <a className="navbar-brand text-white" href="/">
             CountWithMe
           </a>
         </div>
