@@ -2,10 +2,10 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="container blur">
+    <header className="container">
       <nav className="navbar">
         <div className="container d-flex justify-content-center">
-          <a className="navbar-brand text-white" href="/">
+          <a className="navbar-brand" href="/">
             CountWithMe
           </a>
         </div>

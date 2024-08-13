@@ -1,0 +1,24 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  background-color: black;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+
+  text-align: center;
+}
+
+.loading-text {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  animation: pulse 1.5s infinite;
+  margin-bottom: 10px;
+}
+
+.loading-subtext {
+  font-size: 1.2rem;
+  color: #ccc;
+}
