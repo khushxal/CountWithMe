@@ -89,12 +89,7 @@ function Counter() {
               <span className="icon">-</span>
             </button>
           )}
-          <h2>
-            {/* {data.increasevalue > 0 && count > 0
-              ? Number(count) + Number(data.increasevalue)
-              : count} */}
-            {count}
-          </h2>
+          <h2>{count}</h2>
           <button className="btn" onClick={increaseCount}>
             <span className="icon">+</span>
           </button>
