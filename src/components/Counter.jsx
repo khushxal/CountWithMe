@@ -25,8 +25,11 @@ function Counter() {
     setData({ ...data, multiply: 0 });
   }
 
-  function resetCounterName() {
-    setData({ ...data, countername: "Unnamed Counter" });
+  function resetCounter() {
+    if (window.confirm("This will reset the counter")) {
+      setData({ ...data, countername: "Unnamed Counter" });
+      setCount(0);
+    }
   }
 
   function handleChange(event) {
@@ -47,15 +50,18 @@ function Counter() {
     <div className="container">
       <div className="row">
         <div className="col-12 text-center text-dark mt-5">
-          <input
-            type=""
-            id="countername"
-            name="countername"
-            className="countername rounded-3 w-auto"
-            onChange={handleChange}
-            value={data.countername}
-          />
-          <button type="reset" className="btn" onClick={resetCounterName}>
+          <div className="form-floating mb-3">
+            <input
+              type="text"
+              id="countername"
+              name="countername"
+              className="form-control rounded-3"
+              onChange={handleChange}
+              value={data.countername}
+            />
+            <label htmlFor="countername">Counter Name</label>
+          </div>
+          <button type="reset" className="btn" onClick={resetCounter}>
             <img
               src="https://img.icons8.com/?size=100&id=86209&format=png&color=000000"
               height={30}
@@ -78,17 +84,21 @@ function Counter() {
           </div>
         </div>
         <div className="col text-center mb-5">
-          <span className="fs-5">Multiply Value</span>
           <div className="d-flex justify-content-center gap-1 mt-3">
-            <input
-              type="text"
-              className="rounded-3"
-              name="multiply"
-              id="multiply"
-              onChange={handleChange}
-              placeholder={"Provide Multiply value"}
-              value={data.multiply}
-            />
+            <div className="form-floating mb-3">
+              <input
+                type="text"
+                className="form-control rounded-3"
+                name="multiply"
+                id="multiply"
+                onChange={handleChange}
+                placeholder={"Provide Multiply value"}
+                value={data.multiply}
+              />
+              <label htmlFor="multiply" id="multiply">
+                Multiply Value
+              </label>
+            </div>
             <button type="reset" className="btn" onClick={resetMultiply}>
               <img
                 src="https://img.icons8.com/?size=100&id=86209&format=png&color=000000"
