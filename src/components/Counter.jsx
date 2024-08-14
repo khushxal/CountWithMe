@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Loading from "./Loading";
 
 function Counter() {
   const [count, setCount] = useState(
