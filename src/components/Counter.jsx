@@ -13,11 +13,19 @@ function Counter() {
   });
 
   function increaseCount() {
-    setCount(count + 1);
+    if (data.multiply > 0) {
+      setCount(Number(count) + Number(data.multiply));
+    } else {
+      setCount(count + 1);
+    }
   }
 
   function decreaseCount() {
-    setCount(count - 1);
+    if (data.multiply > 0) {
+      setCount(Number(count) - Number(data.multiply));
+    } else {
+      setCount(count - 1);
+    }
   }
 
   function resetMultiply() {
@@ -77,7 +85,9 @@ function Counter() {
               <span className="icon">-</span>
             </button>
           )}
-          <h2>{data.multiply > 0 ? count * data.multiply : count}</h2>
+          <h2>
+            {data.multiply > 0 ? Number(count) + Number(data.multiply) : count}
+          </h2>
           <button className="btn" onClick={increaseCount}>
             <span className="icon">+</span>
           </button>
