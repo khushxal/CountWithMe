@@ -38,7 +38,6 @@ function Counter() {
 
   useEffect(
     function () {
-      console.log(count);
       localStorage.setItem("count", count);
       localStorage.setItem("multiply", data.multiply);
       localStorage.setItem("countername", data.countername);
@@ -96,7 +95,7 @@ function Counter() {
                 value={data.multiply}
               />
               <label htmlFor="multiply" id="multiply">
-                Multiply Value
+                Increase Value
               </label>
             </div>
             <button type="reset" className="btn" onClick={resetMultiply}>
