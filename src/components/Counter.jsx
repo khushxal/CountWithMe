@@ -6,35 +6,39 @@ function Counter() {
   );
 
   const [data, setData] = useState({
-    multiply: localStorage.getItem("multiply")
-      ? localStorage.getItem("multiply")
+    increasevalue: localStorage.getItem("increasevalue")
+      ? localStorage.getItem("increasevalue")
       : 0,
     countername: localStorage.getItem("countername") || "Unnamed Counter",
   });
 
   function increaseCount() {
-    if (data.multiply > 0) {
-      setCount(Number(count) + Number(data.multiply));
+    if (data.increasevalue > 0) {
+      setCount(Number(count) + Number(data.increasevalue));
     } else {
       setCount(count + 1);
     }
   }
 
   function decreaseCount() {
-    if (data.multiply > 0) {
-      setCount(Number(count) - Number(data.multiply));
+    if (data.increasevalue > 0) {
+      if (Number(count) - Number(data.increasevalue) < 0) {
+        setCount(0);
+      } else {
+        setCount(Number(count) - Number(data.increasevalue));
+      }
     } else {
       setCount(count - 1);
     }
   }
 
   function resetMultiply() {
-    setData({ ...data, multiply: 0 });
+    setData({ ...data, increasevalue: 0 });
   }
 
   function resetCounter() {
     if (window.confirm("This will reset the counter")) {
-      setData({ multiply: 0, countername: "Unnamed Counter" });
+      setData({ increasevalue: 0, countername: "Unnamed Counter" });
       setCount(0);
     }
   }
@@ -47,10 +51,10 @@ function Counter() {
   useEffect(
     function () {
       localStorage.setItem("count", count);
-      localStorage.setItem("multiply", data.multiply);
+      localStorage.setItem("increasevalue", data.increasevalue);
       localStorage.setItem("countername", data.countername);
     },
-    [count, data.multiply, data.countername]
+    [count, data.increasevalue, data.countername]
   );
 
   return (
@@ -86,7 +90,10 @@ function Counter() {
             </button>
           )}
           <h2>
-            {data.multiply > 0 ? Number(count) + Number(data.multiply) : count}
+            {/* {data.increasevalue > 0 && count > 0
+              ? Number(count) + Number(data.increasevalue)
+              : count} */}
+            {count}
           </h2>
           <button className="btn" onClick={increaseCount}>
             <span className="icon">+</span>
@@ -98,13 +105,13 @@ function Counter() {
               <input
                 type="text"
                 className="form-control rounded-3"
-                name="multiply"
-                id="multiply"
+                name="increasevalue"
+                id="increasevalue"
                 onChange={handleChange}
                 placeholder={"Provide Multiply value"}
-                value={data.multiply}
+                value={data.increasevalue}
               />
-              <label htmlFor="multiply" id="multiply">
+              <label htmlFor="increasevalue" id="increasevalue">
                 Increase Value
               </label>
             </div>
