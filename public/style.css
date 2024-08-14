@@ -3,7 +3,8 @@ body {
   margin: 0;
   background-color: black;
   color: black !important;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway";
+
   background-color: #000000;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png"),
     radial-gradient(circle, rgb(247, 247, 247) -15%, rgba(0, 0, 0, 1) 90%);
@@ -28,7 +29,8 @@ h1 {
 }
 
 .navbar-brand {
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: 500;
 }
 
 footer {

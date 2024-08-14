@@ -3,7 +3,8 @@ import React from "react";
 function Footer() {
   return (
     <footer className="my-2">
-      By Khushal Verma @ {new Date().getFullYear()}
+      By <a href="https://khushxal.github.io/Khushal/">Khushal Verma</a> @{" "}
+      {new Date().getFullYear()}
     </footer>
   );
 }

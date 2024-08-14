@@ -26,7 +26,7 @@ function Counter() {
 
   function resetCounter() {
     if (window.confirm("This will reset the counter")) {
-      setData({ ...data, countername: "Unnamed Counter" });
+      setData({ multiply: 0, countername: "Unnamed Counter" });
       setCount(0);
     }
   }
