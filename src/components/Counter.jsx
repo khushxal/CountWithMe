@@ -38,6 +38,7 @@ function Counter() {
 
   useEffect(
     function () {
+      console.log(count);
       localStorage.setItem("count", count);
       localStorage.setItem("multiply", data.multiply);
       localStorage.setItem("countername", data.countername);
@@ -49,40 +50,40 @@ function Counter() {
     <div className="container">
       <div className="row">
         <div className="col-12 text-center text-dark mt-5">
-          <div className="form-floating mb-3">
-            <input
-              type="text"
-              id="countername"
-              name="countername"
-              className="form-control rounded-3"
-              onChange={handleChange}
-              value={data.countername}
-            />
-            <label htmlFor="countername">Counter Name</label>
-          </div>
-          <button type="reset" className="btn" onClick={resetCounter}>
-            <img
-              src="https://img.icons8.com/?size=100&id=86209&format=png&color=000000"
-              height={30}
-              width={30}
-              alt=""
-            />
-          </button>
-          <div className="justify-content-center">
-            {count <= 0 ? (
-              ""
-            ) : (
-              <button className="btn" onClick={decreaseCount}>
-                <span className="icon">-</span>
-              </button>
-            )}
-            <h1>{data.multiply > 0 ? count * data.multiply : count}</h1>
-            <button className="btn" onClick={increaseCount}>
-              <span className="icon">+</span>
+          <div className="d-flex justify-content-center gap-1">
+            <div className="form-floating mb-3">
+              <input
+                type="text"
+                id="countername"
+                name="countername"
+                className="form-control rounded-3"
+                onChange={handleChange}
+                value={data.countername}
+              />
+              <label htmlFor="countername">Counter Name</label>
+            </div>
+            <button type="reset" className="btn" onClick={resetCounter}>
+              <img
+                src="https://img.icons8.com/?size=100&id=86209&format=png&color=000000"
+                height={30}
+                width={30}
+                alt=""
+              />
             </button>
           </div>
+          {count <= 0 ? (
+            ""
+          ) : (
+            <button className="btn" onClick={decreaseCount}>
+              <span className="icon">-</span>
+            </button>
+          )}
+          <h2>{data.multiply > 0 ? count * data.multiply : count}</h2>
+          <button className="btn" onClick={increaseCount}>
+            <span className="icon">+</span>
+          </button>
         </div>
-        <div className="col text-center mb-5">
+        <div className="col-12 text-center mb-5">
           <div className="d-flex justify-content-center gap-1 mt-3">
             <div className="form-floating mb-3">
               <input
