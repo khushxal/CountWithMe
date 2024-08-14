@@ -6,7 +6,7 @@ function Header() {
       <nav className="navbar">
         <div className="container d-flex justify-content-center">
           <a className="navbar-brand text-uppercase" href="/">
-            CountWithMe
+            CountWithMee
           </a>
         </div>
       </nav>
