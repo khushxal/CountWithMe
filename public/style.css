@@ -5,9 +5,8 @@ body {
   color: black !important;
   font-family: "McLaren";
 
-  background-color: #000000;
-  background-image: url("https://www.transparenttextures.com/patterns/cubes.png"),
-    radial-gradient(circle, rgb(247, 247, 247) -15%, rgba(0, 0, 0, 1) 90%);
+  background-color: #afadad;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
 header {
@@ -32,7 +31,7 @@ h2 {
 }
 
 .navbar-brand {
-  text-shadow: 3px 3px 5px black;
+  text-shadow: 1px 2px 1px rgb(112, 112, 112);
 }
 
 footer {

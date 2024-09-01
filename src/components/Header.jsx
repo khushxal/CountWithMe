@@ -6,12 +6,14 @@ function Header() {
       <nav className="navbar d-flex justify-content-center">
         <BrowserView>
           <a className={`navbar-brand text-uppercase`} href="/">
-            <h1>CountWithMee</h1>
+            <h1>
+              <strong>Count-With-Me</strong>
+            </h1>
           </a>
         </BrowserView>
         <MobileView>
-          <a className="navbar-brand text-uppercase text-white fs-1" href="/">
-            <h1>CountWithMee</h1>
+          <a className="navbar-brand text-uppercase" href="/">
+            <h1>Count-With-Me</h1>
           </a>
         </MobileView>
       </nav>
